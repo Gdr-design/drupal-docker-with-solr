@@ -43,8 +43,7 @@ services:
     ports:
       - "8983:8983"
     volumes:
-       - ./mycores/collection1:/var/www/html
-    restart: always
+       - ./mycores/collection1
     entrypoint:
       - docker-entrypoint.sh
       - solr-precreate
