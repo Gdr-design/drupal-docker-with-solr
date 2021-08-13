@@ -39,11 +39,10 @@ services:
 
   solr:
     image: solr:8
-    container_name: solr
     ports:
       - "8983:8983"
     volumes:
-       - ./mycores/collection1
+      - ./mycores/collection1:/mycores/collection1
     entrypoint:
       - docker-entrypoint.sh
       - solr-precreate
